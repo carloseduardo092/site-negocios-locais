@@ -14,7 +14,9 @@ const services = [
   { icon: "✨", name: "Degradê",        desc: "Fade moderno com linhas definidas",         price: "R$ 55" },
 ];
 
-const WPP = "https://wa.me/55986309966";
+const mesage = "Olá, gostaria de saber mais sobre os sites para negócios locais que vocês oferecem.";
+const link = `https://api.whatsapp.com/send?phone=5592986309966&text=${encodeURIComponent(mesage)}`;
+
 
 export default function Exemplo() {
   const servicesRef = useRef<HTMLElement>(null);
@@ -39,7 +41,7 @@ export default function Exemplo() {
             Cortes modernos para homens<br />que prezam pelo estilo e precisão.
           </p>
           <div className={styles.btnGroup}>
-            <a href={WPP} className={styles.btnPrimary}>
+            <a href={link} className={styles.btnPrimary}>
               <WppIcon /> Agendar agora
             </a>
             <button
