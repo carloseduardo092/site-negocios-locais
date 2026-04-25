@@ -86,7 +86,7 @@ export default function Exemplo() {
       <section className={styles.ctaSection}>
         <h2 className={styles.ctaTitle}>Pronto para o próximo nível?</h2>
         <p className={styles.ctaSub}>Agende pelo WhatsApp em menos de 1 minuto</p>
-        <a href={WPP} className={styles.btnPrimary}>
+        <a href={link} className={styles.btnPrimary}>
           <WppIcon /> Falar no WhatsApp
         </a>
       </section>
