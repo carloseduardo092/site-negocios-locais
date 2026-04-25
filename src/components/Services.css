@@ -1,0 +1,46 @@
+.benefits {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.benefits h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.benefit p {
+    color: #e7e9ec;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.benefit {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 15px;
+  width: 220px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.benefit span {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .benefit {
+    width: 100%;
+    max-width: 300px;
+  }
+}

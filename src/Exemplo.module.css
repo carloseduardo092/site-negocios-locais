@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap");
+
+.root {
+  font-family: "DM Sans", sans-serif;
+  background: #0a0a0a;
+  color: #f5f0e8;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* <- centraliza horizontalmente   */
+  padding: 60px 40px;
+  overflow: hidden;
+}
+
+.heroBgLines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(180, 140, 60, 0.06) 0px,
+      rgba(180, 140, 60, 0.06) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(180, 140, 60, 0.06) 0px,
+      rgba(180, 140, 60, 0.06) 1px,
+      transparent 1px,
+      transparent 60px
+    );
+  z-index: 0;
+}
+
+.heroAccent {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(180, 140, 60, 0.12) 0%,
+    transparent 70%
+  );
+  z-index: 0;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* BADGE */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(180, 140, 60, 0.12);
+  border: 1px solid rgba(180, 140, 60, 0.35);
+  color: #c9a84c;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 2px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.badgeDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c9a84c;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+/* TÍTULO */
+.heroTitle {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 6vw, 58px);
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.gold {
+  color: #c9a84c;
+}
+
+.heroSub {
+  font-size: 16px;
+  color: rgba(245, 240, 232, 0.55);
+  margin-bottom: 36px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* BOTÕES */
+.btnGroup {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #c9a84c;
+  color: #0a0a0a;
+  padding: 13px 26px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+.btnPrimary:hover {
+  background: #e0be6a;
+  transform: translateY(-1px);
+}
+
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #c9a84c;
+  padding: 13px 26px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+  border: 1px solid rgba(201, 168, 76, 0.45);
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+.btnOutline:hover {
+  border-color: #c9a84c;
+  background: rgba(201, 168, 76, 0.07);
+}
+
+/* ── STATS ── */
+.statsBar {
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.statItem {
+  flex: 1;
+  text-align: center;
+  padding: 28px 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.statItem:last-child {
+  border-right: none;
+}
+
+.statNum {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #c9a84c;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: rgba(245, 240, 232, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ── SERVIÇOS ── */
+.services {
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.serviceCard {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+  padding: 24px 20px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.serviceCard:hover {
+  border-color: rgba(201, 168, 76, 0.35);
+  transform: translateY(-2px);
+}
+
+.serviceCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #c9a84c;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+
+.serviceCard:hover::before {
+  transform: scaleX(1);
+}
+
+.serviceIcon {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.serviceName {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.serviceDesc {
+  font-size: 12px;
+  color: rgba(245, 240, 232, 0.4);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.servicePrice {
+  font-size: 18px;
+  font-weight: 500;
+  color: #c9a84c;
+}
+
+/* ── DIVISOR ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(180, 140, 60, 0.3),
+    transparent
+  );
+  margin: 0 40px;
+}
+
+/* ── CTA ── */
+.ctaSection {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ctaSub {
+  color: rgba(245, 240, 232, 0.45);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 600px) {
+  .hero {
+    padding: 50px 20px;
+  }
+  .services {
+    padding: 40px 20px;
+  }
+  .ctaSection {
+    padding: 50px 20px;
+  }
+  .divider {
+    margin: 0 20px;
+  }
+
+  .btnGroup {
+    flex-direction: column;
+    align-items: center; /* <-  centraliza */
+  }
+  .btnPrimary,
+  .btnOutline {
+    width: auto;
+    justify-content: center;
+    min-width: 220px; /* tamanho mínimo confortável*/
+    justify-content: center;
+  }
+  .statItem {
+    padding: 20px 10px;
+  }
+}
