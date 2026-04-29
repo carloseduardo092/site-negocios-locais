@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import { Link } from "react-router-dom";
 
 const WppIcon = () => (
   <svg width={16} height={16} viewBox="0 0 24 24" fill="currentColor">
@@ -46,9 +47,12 @@ export default function Hero() {
             <a href={link}  rel="noopener noreferrer" className={styles.btnPrimary}>
               <WppIcon /> Quero meu site
             </a>
-            <a href="/exemplo" className={styles.btnSecondary}>
-              Ver exemplo →
-            </a>
+            <Link to="/exemplo" className={styles.btnSecondary}>
+              Exemplo Barbearia →
+            </Link>
+            <Link to="/lanchonete" className={styles.btnSecondary}>
+              Exemplo Lanchonete →
+            </Link>
           </div>
         </div>
 
